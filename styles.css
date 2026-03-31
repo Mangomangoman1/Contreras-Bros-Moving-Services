@@ -435,6 +435,21 @@ img { max-width: 100%; display: block; }
   gap: 1rem;
   margin-top: 1rem;
 }
+.proof-words {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+.proof-word {
+  padding: 0.95rem 1.05rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  font-size: clamp(1.12rem, 4vw, 2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
 .quote-card {
   padding: 1.2rem;
   background: rgba(255,255,255,0.05);
@@ -523,6 +538,29 @@ img { max-width: 100%; display: block; }
 }
 .route-list p { margin-bottom: 0; }
 
+.zone-grid {
+  display: grid;
+  gap: 1rem;
+}
+.zone-card {
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.62);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.zone-card h3 {
+  font-size: 1.25rem;
+  line-height: 1.05;
+  margin-bottom: 0.55rem;
+}
+.zone-card p:last-child { margin-bottom: 0; }
+.zone-card-dark {
+  background: linear-gradient(180deg, var(--forest), #2f4639 100%);
+}
+.zone-card-dark h3,
+.zone-card-dark p,
+.zone-card-dark .card-label { color: white; }
 .area-board {
   display: grid;
   gap: 0.75rem;
@@ -626,8 +664,12 @@ img { max-width: 100%; display: block; }
   .board-card-large {
     grid-column: span 2;
   }
+  .proof-words {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .quote-grid,
-  .contact-grid {
+  .contact-grid,
+  .zone-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .footer-inner {
