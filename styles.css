@@ -702,3 +702,8 @@ img { max-width: 100%; display: block; }
     transition-duration: 0.01ms !important;
   }
 }
+
+.area-button { margin-top: 0.5rem; }
+@media (min-width: 560px) {
+  .ticket-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
