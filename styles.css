@@ -6,6 +6,8 @@
   --accent: #d86b2d;
   --accent-dark: #ab4f1a;
   --forest: #3e5a48;
+  --sage-card: #dfe9df;
+  --sage-card-strong: #d7e3d7;
   --border: rgba(23, 20, 18, 0.14);
   --shadow: 0 18px 40px rgba(23, 20, 18, 0.08);
   --radius: 1.3rem;
@@ -379,6 +381,7 @@ img { max-width: 100%; display: block; }
 
 .board-card {
   padding: 1.2rem;
+  background: linear-gradient(180deg, var(--sage-card) 0%, var(--sage-card-strong) 100%);
 }
 .board-card h3 {
   font-size: 1.32rem;
@@ -545,7 +548,7 @@ img { max-width: 100%; display: block; }
 .zone-card {
   padding: 1.2rem;
   border-radius: var(--radius);
-  background: rgba(255,255,255,0.62);
+  background: linear-gradient(180deg, var(--sage-card) 0%, var(--sage-card-strong) 100%);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -596,12 +599,17 @@ img { max-width: 100%; display: block; }
 }
 .contact-card {
   padding: 1.15rem;
+  background: linear-gradient(180deg, var(--sage-card) 0%, var(--sage-card-strong) 100%);
 }
 .contact-card a {
   display: inline-block;
-  font-size: 1.12rem;
+  max-width: 100%;
+  font-size: clamp(0.98rem, 2.2vw, 1.12rem);
   font-weight: 800;
+  line-height: 1.15;
   margin-bottom: 0.45rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .contact-card p:last-child { margin-bottom: 0; }
 .contact-card ul {
